@@ -124,28 +124,6 @@ src/jobs/
 
 ---
 
-## Database Schema
-
-### New Table: `daily_sessions`
-
-```sql
-daily_sessions (
-  id            UUID PRIMARY KEY,
-  device_id     TEXT NOT NULL,
-  date          DATE NOT NULL,
-  total_active  INTEGER NOT NULL,
-  total_idle    INTEGER NOT NULL,
-  session_count INTEGER NOT NULL,
-  sessions      JSONB NOT NULL,      -- ActivitySession[]
-  patterns      JSONB NOT NULL,      -- SessionPatterns
-  by_category   JSONB NOT NULL,      -- Record<string, {duration, sessions}>
-  computed_at   TIMESTAMPTZ NOT NULL,
-  job_id        TEXT                 -- BullMQ job ID for debugging
-)
-```
-
----
-
 ## Project Structure
 
 ```
