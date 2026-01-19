@@ -1,0 +1,19 @@
+📡 Redis configured: localhost:6379
+
+╔═══════════════════════════════════════╗
+║         Chrono Server v0.1.0          ║
+╠═══════════════════════════════════════╣
+║  Server running on port 3000          ║
+║  API: http://localhost:3000/api       ║
+║  Jobs: http://localhost:3000/api/jobs ║
+║  Workers: Session aggregation active  ║
+╚═══════════════════════════════════════╝
+
+<-- POST /api/sync
+--> POST /api/sync [32m200[0m 22ms
+<-- POST /api/sync
+--> POST /api/sync [32m200[0m 5ms
+<-- POST /api/sync
+--> POST /api/sync [32m200[0m 12ms
+<-- POST /api/sync
+--> POST /api/sync [32m200[0m 10ms

@@ -1,0 +1,25 @@
+meta {
+  name: Get Weekly Insights
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/insights?deviceId={{deviceId}}&type=weekly
+  body: none
+  auth: none
+}
+
+params:query {
+  deviceId: {{deviceId}}
+  type: weekly
+}
+
+docs {
+  Generates a comprehensive weekly report with:
+  - 500-1000 word narrative summary
+  - Highlights and achievements
+  - Detected patterns
+  - Recommendations
+  - Week-over-week comparison
+}

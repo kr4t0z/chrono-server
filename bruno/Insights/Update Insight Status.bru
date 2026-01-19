@@ -1,0 +1,29 @@
+meta {
+  name: Update Insight Status
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/api/insights/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id: YOUR_INSIGHT_ID_HERE
+}
+
+body:json {
+  {
+    "isRead": true,
+    "isDismissed": false
+  }
+}
+
+docs {
+  Mark an insight as read or dismissed.
+
+  - isRead: true when user has seen the insight
+  - isDismissed: true to hide from future responses
+}

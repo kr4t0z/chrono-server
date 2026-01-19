@@ -1,0 +1,24 @@
+meta {
+  name: Get AI Usage Stats
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/api/insights/usage?deviceId={{deviceId}}
+  body: none
+  auth: none
+}
+
+params:query {
+  deviceId: {{deviceId}}
+}
+
+docs {
+  Returns AI usage statistics for the device:
+
+  - Total requests (last 30 days)
+  - Breakdown by model (requests, tokens, avg duration)
+  - Breakdown by type (daily, weekly, project)
+  - Rate limit status (remaining hourly/daily, next reset)
+}

@@ -1,0 +1,24 @@
+meta {
+  name: Create Project
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/projects
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Chrono",
+    "color": "#00d4ff",
+    "description": "Personal time tracking and productivity intelligence system",
+    "aiContext": "This is my main side project - a time tracking app that uses AI to provide productivity insights. The goal is to understand work patterns and improve focus.",
+    "filePaths": ["~/Apps/personal-projects/chrono"],
+    "urlPatterns": ["github.com/kr4t0z/chrono"],
+    "appPatterns": ["Nvim", "Ghostty"],
+    "goals": "Ship MVP by end of January, start tracking my life."
+  }
+}

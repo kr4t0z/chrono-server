@@ -1,0 +1,15 @@
+meta {
+  name: Accept Suggestion
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/api/categories/suggestions/:id/accept
+  body: none
+  auth: none
+}
+
+params:path {
+  id: suggestion-uuid-here
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Reject Suggestion
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/api/categories/suggestions/:id/reject
+  body: none
+  auth: none
+}
+
+params:path {
+  id: suggestion-uuid-here
+}

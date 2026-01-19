@@ -1,0 +1,35 @@
+meta {
+  name: Force Generate Insights
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/insights/generate?deviceId={{deviceId}}
+  body: json
+  auth: none
+}
+
+params:query {
+  deviceId: {{deviceId}}
+}
+
+body:json {
+  {
+    "type": "daily",
+    "model": "claude-3-5-sonnet"
+  }
+}
+
+docs {
+  Force regenerate insights, bypassing the cache.
+
+  Use this when:
+  - User clicks "Regenerate" button
+  - Want to test different models
+  - Cache is stale but not expired
+
+  Subject to rate limits:
+  - 3 generations per hour
+  - 10 generations per day
+}

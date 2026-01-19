@@ -1,0 +1,27 @@
+meta {
+  name: Get Insights with Model
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/insights?deviceId={{deviceId}}&type=daily&model=claude-3-5-sonnet
+  body: none
+  auth: none
+}
+
+params:query {
+  deviceId: {{deviceId}}
+  type: daily
+  model: claude-3-5-sonnet
+}
+
+docs {
+  Request insights using a specific AI model.
+
+  Available models:
+  - claude-3-5-haiku (fast, cheap - default for daily)
+  - claude-3-5-sonnet (high quality - default for weekly)
+  - gpt-4o-mini (OpenAI fast)
+  - gpt-4o (OpenAI high quality)
+}

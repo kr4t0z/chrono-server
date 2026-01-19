@@ -1,0 +1,21 @@
+meta {
+  name: Update Project
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{baseUrl}}/api/projects/:id
+  body: json
+  auth: none
+}
+
+params:path {
+  id: YOUR_PROJECT_ID_HERE
+}
+
+body:json {
+  {
+    "goals": "Ship MVP by end of January, get 20 beta users, implement weekly reports"
+  }
+}

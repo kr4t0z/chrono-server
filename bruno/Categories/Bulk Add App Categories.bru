@@ -1,0 +1,32 @@
+meta {
+  name: Bulk Add App Categories
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/api/categories/bulk/apps
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "categories": [
+      { "appName": "Visual Studio Code", "category": "development" },
+      { "appName": "Cursor", "category": "development" },
+      { "appName": "Xcode", "category": "development" },
+      { "appName": "Ghostty", "category": "development" },
+      { "appName": "iTerm2", "category": "development" },
+      { "appName": "Terminal", "category": "development" },
+      { "appName": "Bruno", "category": "development" },
+  //     { "appName": "Figma", "category": "design" },
+  //     { "appName": "Sketch", "category": "design" },
+      { "appName": "Slack", "category": "communication" },
+      { "appName": "Discord", "category": "communication" },
+      { "appName": "Messages", "category": "communication" },
+      { "appName": "Mail", "category": "communication" },
+      { "appName": "Telegram", "category": "communication" }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "chrono-server",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts 2>&1 | tee server.log",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push:pg",
+    "db:studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30.0",
+    "@hono/node-server": "^1.8.0",
+    "bullmq": "^5.66.5",
+    "date-fns": "^3.0.0",
+    "drizzle-orm": "^0.29.0",
+    "hono": "^4.0.0",
+    "openai": "^4.70.0",
+    "postgres": "^3.4.0",
+    "zod": "^3.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "tsx": "^4.7.0",
+    "drizzle-kit": "^0.20.0"
+  }
+}

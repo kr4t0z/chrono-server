@@ -1,0 +1,17 @@
+meta {
+  name: Get Sessions Range
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/stats/sessions/range?startDate=2026-01-11&endDate=2026-01-18&deviceId={{deviceId}}
+  body: none
+  auth: none
+}
+
+params:query {
+  startDate: 2026-01-11
+  endDate: 2026-01-18
+  deviceId: {{deviceId}}
+}

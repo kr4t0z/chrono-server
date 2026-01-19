@@ -1,0 +1,57 @@
+meta {
+  name: Bulk Add Domain Categories
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/api/categories/bulk/domains
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "categories": [
+      { "domain": "remix.ethereum.org", "category": "development" },
+      { "domain": "platform.claude.com", "category": "development" },
+      { "domain": "chatgpt.com", "category": "development" },
+      { "domain": "gemini.google.com", "category": "development" },
+      { "domain": "platform.openai.com", "category": "development" },
+      { "domain": "grok.com", "category": "development" },
+      { "domain": "v0.app", "category": "development" },
+      { "domain": "lovable.dev", "category": "development" },
+      { "domain": "github.com", "category": "development" },
+      { "domain": "gitlab.com", "category": "development" },
+      { "domain": "localhost", "category": "development", "pattern": "localhost:*" },
+
+      { "domain": "figma.com", "category": "design" },
+      { "domain": "canva.com", "category": "design" },
+      { "domain": "vectorizer.ai", "category": "design" },
+      { "domain": "imgupscaler.ai", "category": "design" },
+      { "domain": "imgupscaler.com", "category": "design" },
+      { "domain": "figma.site", "category": "design", "pattern": "*.figma.site" },
+
+      { "domain": "docs.clawd.bot", "category": "research" },
+      { "domain": "duckduckgo.com", "category": "research" },
+      { "domain": "google.com", "category": "research" },
+      { "domain": "wikipedia.org", "category": "research", "pattern": "*.wikipedia.org" },
+      { "domain": "stackoverflow.com", "category": "research" },
+      { "domain": "developer.mozilla.org", "category": "research" },
+
+      { "domain": "mail.google.com", "category": "communication" },
+      { "domain": "gmail.com", "category": "communication" },
+
+      { "domain": "youtube.com", "category": "distraction" },
+      { "domain": "instagram.com", "category": "distraction" },
+      { "domain": "x.com", "category": "distraction" },
+      { "domain": "twitter.com", "category": "distraction" },
+      { "domain": "reddit.com", "category": "distraction" },
+      { "domain": "geeky-gadgets.com", "category": "distraction" },
+      { "domain": "netflix.com", "category": "distraction" },
+
+      { "domain": "accounts.google.com", "category": "other" },
+      { "domain": "dashboard.visorfinance.app", "category": "other" }
+    ]
+  }
+}

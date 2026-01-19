@@ -1,0 +1,27 @@
+meta {
+  name: Update Settings
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/api/settings?deviceId={{deviceId}}
+  body: json
+  auth: none
+}
+
+params:query {
+  deviceId: {{deviceId}}
+}
+
+body:json {
+  {
+    "displayName": "John Doe",
+    "timezone": "America/New_York",
+    "workDescription": "Full-stack developer working on personal projects and client work",
+    "productivityGoals": "Focus more on deep work, reduce social media distractions, ship Chrono by end of month",
+    "distractionApps": ["Reddit", "Twitter", "YouTube", "Discord"],
+    "insightFrequency": "daily",
+    "preferredModel": "claude-3-5-haiku"
+  }
+}

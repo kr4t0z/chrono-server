@@ -1,0 +1,19 @@
+meta {
+  name: Create Domain Category
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/categories/domains
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "domain": "github.com",
+    "category": "development",
+    "pattern": "*.github.com"
+  }
+}

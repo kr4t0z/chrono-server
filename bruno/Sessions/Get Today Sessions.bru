@@ -1,0 +1,15 @@
+meta {
+  name: Get Today Sessions
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/stats/sessions/today?deviceId={{deviceId}}
+  body: none
+  auth: none
+}
+
+params:query {
+  deviceId: {{deviceId}}
+}

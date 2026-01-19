@@ -1,0 +1,15 @@
+meta {
+  name: Get Job Status
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/jobs/sessions/:jobId
+  body: none
+  auth: none
+}
+
+params:path {
+  jobId: sessions-{{deviceId}}-2026-01-18
+}

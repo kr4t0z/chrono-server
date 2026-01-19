@@ -1,0 +1,15 @@
+meta {
+  name: Get Daily Sessions
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/stats/sessions/2026-01-18?deviceId={{deviceId}}
+  body: none
+  auth: none
+}
+
+params:query {
+  deviceId: {{deviceId}}
+}

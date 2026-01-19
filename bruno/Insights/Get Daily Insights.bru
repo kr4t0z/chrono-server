@@ -1,0 +1,28 @@
+meta {
+  name: Get Daily Insights
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/insights?deviceId={{deviceId}}&type=daily&model=claude-3-5-sonnet
+  body: none
+  auth: none
+}
+
+params:query {
+  deviceId: {{deviceId}}
+  type: daily
+  model: claude-3-5-sonnet
+}
+
+docs {
+  Returns cached insights if available, otherwise generates new ones.
+  
+  Query params:
+  - deviceId (required): Device identifier
+  - type: daily | weekly | project (default: daily)
+  - scope: Optional scope (e.g., project name)
+  - model: claude-3-5-haiku | claude-3-5-sonnet | gpt-4o-mini | gpt-4o
+  - forceRefresh: true to bypass cache
+}

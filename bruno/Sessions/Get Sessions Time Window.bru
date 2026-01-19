@@ -1,0 +1,17 @@
+meta {
+  name: Get Sessions Time Window
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/stats/sessions/2026-01-18?deviceId={{deviceId}}&startAt=2026-01-18T23:35:00-03:00&endAt=2026-01-18T23:45:21-03:00
+  body: none
+  auth: none
+}
+
+params:query {
+  deviceId: {{deviceId}}
+  startAt: 2026-01-18T23:35:00-03:00
+  endAt: 2026-01-18T23:45:21-03:00
+}

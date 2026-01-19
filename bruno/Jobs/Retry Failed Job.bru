@@ -1,0 +1,15 @@
+meta {
+  name: Retry Failed Job
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/api/jobs/sessions/:jobId/retry
+  body: none
+  auth: none
+}
+
+params:path {
+  jobId: sessions-{{deviceId}}-2026-01-18
+}

@@ -1,0 +1,36 @@
+meta {
+  name: Sync Events
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/sync
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "deviceId": "{{deviceId}}",
+    "source": "macos",
+    "events": [
+      {
+        "timestamp": "2026-01-18T10:00:00Z",
+        "appName": "VS Code",
+        "windowTitle": "index.ts - chrono-server",
+        "bundleIdentifier": "com.microsoft.VSCode",
+        "isIdle": false,
+        "duration": 300
+      },
+      {
+        "timestamp": "2026-01-18T10:05:00Z",
+        "appName": "Firefox",
+        "windowTitle": "GitHub - chrono",
+        "url": "https://github.com/user/chrono",
+        "isIdle": false,
+        "duration": 120
+      }
+    ]
+  }
+}

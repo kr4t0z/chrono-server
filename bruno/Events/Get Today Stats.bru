@@ -1,0 +1,15 @@
+meta {
+  name: Get Today Stats
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/stats/today?deviceId={{deviceId}}
+  body: none
+  auth: none
+}
+
+params:query {
+  deviceId: {{deviceId}}
+}

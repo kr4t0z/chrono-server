@@ -1,0 +1,15 @@
+meta {
+  name: Get Weekly Patterns
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/stats/weekly-patterns?deviceId={{deviceId}}
+  body: none
+  auth: none
+}
+
+params:query {
+  deviceId: {{deviceId}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get Failed Jobs
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/jobs/failed?limit=10
+  body: none
+  auth: none
+}
+
+params:query {
+  limit: 10
+}

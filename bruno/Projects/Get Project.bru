@@ -1,0 +1,15 @@
+meta {
+  name: Get Project
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/projects/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id: YOUR_PROJECT_ID_HERE
+}
